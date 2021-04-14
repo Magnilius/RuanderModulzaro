@@ -1,0 +1,7 @@
+C:\Users\danagy\source\repos\ModulzaroRuander\ModulzaroRuander\bin\Debug\ModulzaroRuander.exe.config
+C:\Users\danagy\source\repos\ModulzaroRuander\ModulzaroRuander\bin\Debug\ModulzaroRuander.exe
+C:\Users\danagy\source\repos\ModulzaroRuander\ModulzaroRuander\bin\Debug\ModulzaroRuander.pdb
+C:\Users\danagy\source\repos\ModulzaroRuander\ModulzaroRuander\obj\Debug\ModulzaroRuander.csprojAssemblyReference.cache
+C:\Users\danagy\source\repos\ModulzaroRuander\ModulzaroRuander\obj\Debug\ModulzaroRuander.csproj.CoreCompileInputs.cache
+C:\Users\danagy\source\repos\ModulzaroRuander\ModulzaroRuander\obj\Debug\ModulzaroRuander.exe
+C:\Users\danagy\source\repos\ModulzaroRuander\ModulzaroRuander\obj\Debug\ModulzaroRuander.pdb
