@@ -1,0 +1,4 @@
+Jim keresztnévből 8
+John keresztnévből 12
+Joe keresztnévből 8
+Jack keresztnévből 1

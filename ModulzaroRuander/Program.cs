@@ -46,7 +46,7 @@ namespace ModulzaroRuander
             {
                 i++;
             }
-            bool van = i < N;
+            bool van = i < 8;
             if (van)
             {
                 Console.WriteLine($"A megadott játékos magassága: {eloszor[i].magassag * 2.54:F1} cm");
@@ -82,6 +82,75 @@ namespace ModulzaroRuander
                 }
             }
 
+            //5. feladat
+            DateTime legkisebb = DateTime.Now;
+            foreach (Balkezes balkez in balkezesek)
+            {
+                if (balkez.elsodate < legkisebb)
+                {
+                    legkisebb = balkez.elsodate;
+                }
+            }
+            Console.WriteLine($"A legkorábbi dátum {legkisebb}");
+
+            //6. feladat
+            bool igen = false;
+            foreach (Balkezes balkez in balkezesek)
+            {
+                if (balkez.utolsodate.Year >= 2000)
+                {
+                    igen = true;
+                }
+            }
+            if (igen)
+            {
+                Console.WriteLine("Van olyan játékos aki 2000 után lépett pályára");
+            }
+            else
+            {
+                Console.WriteLine("Nincs olyan játékos aki 2000 után lépett pályára");
+            }
+
+            //7. feladat
+            Console.WriteLine("Az emberek akinek John van a nevében:");
+            foreach (Balkezes balkez in balkezesek)
+            {
+                if (balkez.nev.Contains("John"))
+                {
+                    Console.Write(balkez.nev + " ");
+                }
+            }
+            Console.WriteLine("");
+            //8. feladat
+            Dictionary<string, int> nevek = new Dictionary<string, int>();
+            List<string> keresett = new List<string>();
+            foreach (Balkezes balkez in balkezesek)
+            {
+                if (balkez.keresztnev == "Joe" || balkez.keresztnev == "John" || balkez.keresztnev == "Jim" || balkez.keresztnev == "Jack")
+                {
+                    keresett.Add(balkez.keresztnev);
+                }
+            }
+            foreach (string keres in keresett)
+            {
+                string kulcs = keres;
+                if (nevek.ContainsKey(kulcs))
+                {
+                    nevek[kulcs]++;
+                }
+                else
+                {
+                    nevek.Add(kulcs, 1);
+                }
+            }
+            List<string> kiirando = new List<string>();
+            foreach (var item in nevek)
+            {
+                kiirando.Add($"{item.Key} keresztnévből {item.Value}");
+                Console.WriteLine($"{item.Key} keresztnévből {item.Value}");
+            }
+
+            File.WriteAllLines("kernevek.txt", kiirando);
 
 
             Console.Read();
